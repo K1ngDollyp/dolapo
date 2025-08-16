@@ -13,9 +13,10 @@ import {
     Pagination,
 } from '@mui/material';
 
-const Grid = styled(MuiGrid)``;
 import ProductCard from '../components/ProductCard';
 import { Product } from '../types';
+
+const Grid = styled(MuiGrid)``;
 
 // Sample product data (you can replace this with your API call)
 const sampleProducts: Product[] = [
@@ -24,7 +25,7 @@ const sampleProducts: Product[] = [
         name: 'Premium Notebook',
         description: 'High-quality notebook with 200 pages, perfect for taking notes in class.',
         price: 4.99,
-        image: 'https://placeholder.com/300',
+        image: 'https://via.placeholder.com/300',
         category: 'Stationery',
         stock: 50,
     },
@@ -33,7 +34,7 @@ const sampleProducts: Product[] = [
         name: 'Scientific Calculator',
         description: 'Advanced scientific calculator with all functions needed for math and science classes.',
         price: 19.99,
-        image: 'https://placeholder.com/300',
+        image: 'https://via.placeholder.com/300',
         category: 'Electronics',
         stock: 30,
     },
@@ -43,7 +44,6 @@ const sampleProducts: Product[] = [
 const ITEMS_PER_PAGE = 12;
 
 const Products = () => {
-    const Item = styled('div')(({ theme }) => ({}));
     const [searchTerm, setSearchTerm] = useState('');
     const [category, setCategory] = useState('all');
     const [page, setPage] = useState(1);
@@ -77,8 +77,8 @@ const Products = () => {
             </Typography>
 
             <Box sx={{ mb: 4 }}>
-                <Grid container spacing={2} alignItems="center" component="div">
-                    <Grid item xs={12} md={6} component="div">
+                <Grid container spacing={2} alignItems="center">
+                    <Grid item xs={12} md={6}>
                         <TextField
                             fullWidth
                             label="Search Products"
@@ -86,7 +86,7 @@ const Products = () => {
                             onChange={(e) => setSearchTerm(e.target.value)}
                         />
                     </Grid>
-                    <Grid item xs={12} md={6} component="div">
+                    <Grid item xs={12} md={6}>
                         <FormControl fullWidth>
                             <InputLabel>Category</InputLabel>
                             <Select
@@ -104,9 +104,9 @@ const Products = () => {
                 </Grid>
             </Box>
 
-            <Grid container spacing={4} component="div">
+            <Grid container spacing={4}>
                 {currentProducts.map((product) => (
-                    <Grid item key={product.id} xs={12} sm={6} md={4} lg={3} component="div">
+                    <Grid item key={product.id} xs={12} sm={6} md={4} lg={3}>
                         <ProductCard
                             product={product}
                             onAddToCart={handleAddToCart}

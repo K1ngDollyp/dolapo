@@ -19,6 +19,8 @@ import {
 } from '@mui/icons-material';
 import { CartItem } from '../types';
 
+const Grid = styled(MuiGrid)``;
+
 // Sample cart items (replace with your state management solution)
 const sampleCartItems: CartItem[] = [
     {
@@ -26,7 +28,7 @@ const sampleCartItems: CartItem[] = [
         name: 'Premium Notebook',
         description: 'High-quality notebook with 200 pages',
         price: 4.99,
-        image: 'https://placeholder.com/300',
+        image: 'https://via.placeholder.com/300',
         category: 'Stationery',
         stock: 50,
         quantity: 2,
@@ -80,8 +82,8 @@ const Cart = () => {
                     {cartItems.map((item) => (
                         <Card key={item.id} sx={{ mb: 2 }}>
                             <CardContent>
-                                <Grid container spacing={2} alignItems="center" component="div">
-                                    <Grid item xs={3} sm={2} component="div">
+                                <Grid container spacing={2} alignItems="center">
+                                    <Grid item xs={3} sm={2}>
                                         <CardMedia
                                             component="img"
                                             height="80"
@@ -90,7 +92,7 @@ const Cart = () => {
                                             sx={{ objectFit: 'contain' }}
                                         />
                                     </Grid>
-                                    <Grid item xs={9} sm={4} component="div">
+                                    <Grid item xs={9} sm={4}>
                                         <Typography variant="h6">
                                             {item.name}
                                         </Typography>
@@ -105,7 +107,6 @@ const Cart = () => {
                                         item
                                         xs={12}
                                         sm={4}
-                                        component="div"
                                         sx={{
                                             display: 'flex',
                                             alignItems: 'center',
@@ -141,7 +142,6 @@ const Cart = () => {
                                         item
                                         xs={12}
                                         sm={2}
-                                        component="div"
                                         sx={{
                                             display: 'flex',
                                             justifyContent: 'flex-end',
@@ -162,7 +162,7 @@ const Cart = () => {
                     ))}
                 </Grid>
 
-                <Grid item xs={12} md={4} component="div">
+                <Grid item xs={12} md={4}>
                     <Card>
                         <CardContent>
                             <Typography variant="h6" gutterBottom>

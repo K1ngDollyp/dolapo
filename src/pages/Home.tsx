@@ -55,7 +55,7 @@ const Home = () => {
                         variant="outlined"
                         color="primary"
                         component={Link}
-                        to="/categories"
+                        to="/products"
                         size="large"
                     >
                         View Categories
@@ -63,8 +63,8 @@ const Home = () => {
                 </Box>
             </Box>
 
-            <Grid container spacing={4} sx={{ mt: 4 }} component="div">
-                <Grid item xs={12} md={4} component="div">
+            <Grid container spacing={4} sx={{ mt: 4 }}>
+                <Grid item xs={12} md={4}>
                     <Paper
                         sx={{
                             p: 3,
@@ -83,7 +83,7 @@ const Home = () => {
                         </Typography>
                     </Paper>
                 </Grid>
-                <Grid item xs={12} md={4} component="div">
+                <Grid item xs={12} md={4}>
                     <Paper
                         sx={{
                             p: 3,
@@ -102,7 +102,7 @@ const Home = () => {
                         </Typography>
                     </Paper>
                 </Grid>
-                <Grid item xs={12} md={4} component="div">
+                <Grid item xs={12} md={4}>
                     <Paper
                         sx={{
                             p: 3,
