@@ -1,4 +1,5 @@
 import React from 'react';
+import { styled } from '@mui/material/styles';
 import {
     Container,
     Typography,
@@ -11,9 +12,6 @@ import {
     Button,
     Divider,
 } from '@mui/material';
-import { styled } from '@mui/material/styles';
-
-const Grid = styled(MuiGrid)``;
 import {
     Add as AddIcon,
     Remove as RemoveIcon,
@@ -77,8 +75,8 @@ const Cart = () => {
                 Shopping Cart
             </Typography>
 
-            <Grid container spacing={4} component="div">
-                <Grid item xs={12} md={8} component="div">
+            <Grid container spacing={4}>
+                <Grid item xs={12} md={8}>
                     {cartItems.map((item) => (
                         <Card key={item.id} sx={{ mb: 2 }}>
                             <CardContent>
