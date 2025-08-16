@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { styled } from '@mui/material/styles';
 import {
     Container,
     Grid as MuiGrid,
@@ -11,7 +12,6 @@ import {
     MenuItem,
     Pagination,
 } from '@mui/material';
-import { styled } from '@mui/material/styles';
 
 const Grid = styled(MuiGrid)``;
 import ProductCard from '../components/ProductCard';
