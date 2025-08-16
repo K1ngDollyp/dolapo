@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/dolapo/static/css/main.26a80025.css",
+    "main.js": "/dolapo/static/js/main.eba9a515.js",
+    "static/js/453.4229e418.chunk.js": "/dolapo/static/js/453.4229e418.chunk.js",
+    "index.html": "/dolapo/index.html",
+    "main.26a80025.css.map": "/dolapo/static/css/main.26a80025.css.map",
+    "main.eba9a515.js.map": "/dolapo/static/js/main.eba9a515.js.map",
+    "453.4229e418.chunk.js.map": "/dolapo/static/js/453.4229e418.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.26a80025.css",
+    "static/js/main.eba9a515.js"
+  ]
+}
